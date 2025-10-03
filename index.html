@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>AgoodShop</title>
+
+    <!-- en el head pongo la hoja de estilo de bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- incluyo una barra de navegacion superior con estilos bootstrap
+     que sin ser ninguna maravilla es algo mas vistosa que la que aparecia en origen.
+     Anado un campo vacio para busquedas y el boton para llevarlas a cabo -->
+
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">AgoodShop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white mx-2" aria-current="page" href="#">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white mx-2" aria-current="page" href="#">Nuestros productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white mx-2" aria-current="page" href="#">Nuestros servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white mx-2" aria-current="page" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busca productos" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- la tabla queda muy similar a como estaba, habiendole anadido solo 
+     algo de formato en bootstrap para que resalte la cabecera y las diferentes
+     lineas de productos -->
+
+    <div id="contenedor">
+        <div id="contenedorTabla">
+            <table class="table table-striped table-bordered" id="tablaProductos">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Pr. Unidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+
+                </tbody>
+            </table>
+        </div>
+
+    <!-- el contenedor del carrito sufre la mayor variacion respecto del inicial.
+     Dista mucho de verse bonito, ya que ni siquiera tiene un espacio propio pero
+     con lo que en este momento de mi vida se de bootstrap y de diseno de paginas
+     web no me siento capaz de hacer algo mucho mejor. He anadido dos botones
+     y he encerrado el contenedor en un borde negro redondeado -->
+
+        <div id="contedorCarrito">
+            <div id="tituloTotal">
+                <h2>Total Compra</h2>
+            </div>
+
+            <div id="productosCarrito">
+                <p class="text-muted">Carrito vacío</p>
+            </div>
+
+            <div id="contenedorTotal" class="d-flex justify-content-between align-items-center">
+                <span>TOTAL</span>
+                <span id="totalFinal">0€</span>
+            </div>
+
+            <button class="btn btn-primary w-100 mt-3">Finalizar Compra</button>
+            <button class="btn btn-info w-100 mt-2">Vaciar Carrito</button>
+
+        </div>
+
+    </div>
+
+    <script src="./scripts.js"></script>
+
+    <!-- en el body al final pongo el script de bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
